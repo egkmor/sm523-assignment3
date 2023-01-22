@@ -1,5 +1,8 @@
 # SM523 Assignment3
 
+This repo includes all the source code for the third assignment in Java and the relevant UML diagrams in PlantUML. The diagrams can also be found in
+jpg.
+
 ## Case 1-Observer
 
 In the first case, I used Observer pattern to notify users about discounts in airline companies when there is a change in companies' state. This
