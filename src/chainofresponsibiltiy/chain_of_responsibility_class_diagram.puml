@@ -1,0 +1,31 @@
+@startuml
+skinparam linetype ortho
+
+class Package {
+    -destination: String
+    +Package(destination: String)
+    +getDestination(): String
+}
+
+interface PackageHandler {
+    +setNext(next: PackageHandler): void
+    +handlePackage(pkg: Package): void
+}
+
+class DistributionStation implements PackageHandler {
+    -initialCapacity: int
+    -currentCapacity: int
+    -closestHandler: PackageHandler
+    -location: String
+    +DistributionStation(capacity: int, location: String)
+    +setClosestHandler(next: PackageHandler): void
+    +handlePackage(pkg: Package): void
+}
+
+class Client {
+}
+
+Package --> PackageHandler
+Client --> DistributionStation
+PackageHandler --> PackageHandler : successor
+@enduml

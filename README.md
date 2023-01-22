@@ -33,5 +33,15 @@ Below you can see the UML diagram.
 
 ![](./src/command/command_class_diagram.png)
 
-## Case 3
+## Case 3-Chain of Responsibility
+
+In the third case, I have used the chain of responsibility pattern to handle the package delivery logic. Each distribution station in the network has
+the opportunity to handle the package if its capacity allows it. If not, it sends the package to the next distribution station in chain.
+
+The Chain of Responsibility pattern decouples the sender of a request from the object that handles it. Instead of having the sender
+directly call the method on the object that should handle the request, the sender sends the request to a chain of objects, and each object in the
+chain handles the request one by one.
+
+Order of the chain can be changed or different chains for different purposes can be built. Also request handling logic can be modified for further
+different use cases.
 
