@@ -1,4 +1,4 @@
-package chainofresponsibiltiy;
+package chainofresponsibility;
 
 public interface PackageHandler {
     void setClosestHandler(PackageHandler closestHandler);

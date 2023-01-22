@@ -1,4 +1,4 @@
-package chainofresponsibiltiy;
+package chainofresponsibility;
 
 public class DistributionStation implements PackageHandler {
     private int initialCapacity;

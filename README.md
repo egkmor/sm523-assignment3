@@ -1,7 +1,7 @@
 # SM523 Assignment3
 
 This repo includes all the source code for the third assignment in Java and the relevant UML diagrams in PlantUML. The diagrams can also be found in
-jpg.
+png.
 
 ## Case 1-Observer
 
@@ -44,4 +44,9 @@ chain handles the request one by one.
 
 Order of the chain can be changed or different chains for different purposes can be built. Also request handling logic can be modified for further
 different use cases.
+
+Below you can see the UML diagram.
+
+![](./src/chainofresponsibility/chain_of_responsibility_class_diagram.png)
+
 

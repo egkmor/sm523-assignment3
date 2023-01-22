@@ -1,4 +1,4 @@
-package chainofresponsibiltiy;
+package chainofresponsibility;
 
 public class Package {
     private String destination;

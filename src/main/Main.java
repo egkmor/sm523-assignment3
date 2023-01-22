@@ -1,7 +1,7 @@
 package main;
 
-import chainofresponsibiltiy.DistributionStation;
-import chainofresponsibiltiy.Package;
+import chainofresponsibility.DistributionStation;
+import chainofresponsibility.Package;
 import command.CancelOrderCommand;
 import command.Command;
 import command.Invoker;
