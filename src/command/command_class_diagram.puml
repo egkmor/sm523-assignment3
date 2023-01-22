@@ -1,0 +1,45 @@
+@startuml
+skinparam linetype ortho
+class Client {
+}
+interface Command {
++execute(): void
+}
+
+
+class Order {
+    -product: String
+    -status: String
+    +Order(product: String)
+    +process(): void
+    +cancel(): void
+}
+
+class ProcessOrderCommand implements Command {
+    -order: Order
+    +ProcessOrderCommand(order: Order)
+    +execute(): void
+}
+
+class CancelOrderCommand  implements Command{
+    -order: Order
+    +CancelOrderCommand(order: Order)
+    +execute(): void
+}
+
+class Invoker {
+    -command: Command
+    +setCommand(command: Command): void
+    +executeCommand(): void
+}
+
+Command -[hidden]->  CancelOrderCommand
+Command -[hidden]->  ProcessOrderCommand
+Client --right> CancelOrderCommand
+Client --right> ProcessOrderCommand
+Client --right> Order
+CancelOrderCommand -[hidden]-> Order
+ProcessOrderCommand --> Order
+CancelOrderCommand --> Order
+Invoker --> Command
+@enduml
