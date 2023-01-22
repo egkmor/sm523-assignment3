@@ -1,0 +1,44 @@
+@startuml
+abstract class Company {
+    -users: List<User>
+    +addObserver(user: User)
+    +removeObserver(user: User)
+    +notifyObservers()
+}
+
+abstract class User {
+    -name: String
+    +update(company: Company)
+}
+
+class THY extends Company {
+    -name: String
+    +getName()
+}
+
+class Lufthansa extends Company {
+    -name: String
+    +getName()
+}
+
+class Sunexpress extends Company {
+    -name: String
+    +getName()
+}
+
+class RegularUser extends User {
+    -userType: String
+    +update(company: Company)
+}
+
+class VIPUser extends User {
+    -userType: String
+    +update(company: Company)
+}
+
+class GoldUser extends User {
+    -userType: String
+    +update(company: Company)
+}
+Company --right> "*" User
+@enduml
